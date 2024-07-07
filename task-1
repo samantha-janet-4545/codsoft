@@ -1,0 +1,19 @@
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        int lowerBound = 1;
+        int upperBound = 100;
+
+        // Generate a random number within the specified range
+        int randomNumber = generateRandomNumber(lowerBound, upperBound);
+
+        System.out.println("Random number between " + lowerBound + " and " + upperBound + ": " + randomNumber);
+    }
+
+    public static int generateRandomNumber(int lowerBound, int upperBound) {
+        Random rand = new Random();
+        // Generate random number within the range [lowerBound, upperBound]
+        return rand.nextInt(upperBound - lowerBound + 1) + lowerBound;
+    }
+}
